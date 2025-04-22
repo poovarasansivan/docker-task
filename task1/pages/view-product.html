@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/view-product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>View Products</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>FREE delivery & 40% Discount for next 3 orders! Place your 1st order in. </h1>
+            <h1>Summer sale ends in <span>47</span> days <span>9</span> hours <span>53</span> minutes <span>60</span>
+                sec </h1>
+        </div>
+    </header>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="desktop-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./product.html">Products</a></li>
+            <li><a href="./cart.html">Cart</a></li>
+            <li><a href="./aboutus.html">About</a></li>
+            <li><a href="./contactus.html">Contact</a></li>
+        </ul>
+        <ul class="user-menu">
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+            <li><a href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
+        </ul>
+        <div class="mobile-nav" id="mobileMenu">
+            <a href="../index.html" onclick="closeMenu()">Home</a>
+            <a href="./product.html" onclick="closeMenu()">Products</a>
+            <a href="./cart.html" onclick="closeMenu()">Cart</a>
+            <a href="./aboutus.html" onclick="closeMenu()">About</a>
+            <a href="./contactus.html" onclick="closeMenu()">Contact</a>
+
+        </div>
+    </nav>
+    <main>
+        <div class="view-product-container">
+            <div class="view-product-img">
+                <img src="../assets/hero.png" alt="Banana" class="product-image">
+
+            </div>
+            <div class="view-product-details">
+                <h1>Marketside Fresh Organic Bananas,
+                    Bunch</h1>
+                <div class="rating-container">
+                    <p class="rating" data-rating="3"></p>
+                    <p class="rating-count">(3.0)</p>
+                    <p class="rating-count">1000+ Ratings</p>
+                </div>
+                <hr class="product-divider">
+                <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="product-price">$100 <del>2.9%</del></p>
+                <div class="whatsapp-button">
+                    <button class="whatsapp-btn">Order on WhatsApp</button>
+                </div>
+                <div class="special-offer-container">
+                    <h2>Special Offer:</h2>
+                    <p class="days">81</p>
+                    <p class="hrs">06</p>
+                    <p class="mins">30</p>
+                    <p class="colon">:</p>
+                    <p class="sec">00</p>
+                    <p class="offer-text">Remains until the end of the offer.</p>
+                </div>
+                <div class="card-buynow-btn">
+                    <div class="quantity-container">
+                        <button class="quantity-btn" onclick="decrement()">−</button>
+                        <span id="quantity">1</span>
+                        <button class="quantity-btn" onclick="increment()">+</button>
+                    </div>
+                    <button class="add-to-cart-btn"><a href="../pages/cart.html">Add To Cart</a></button>
+                    <button class="buy-now-btn"><a href="../pages/cart.html">Buy Now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-descriptions">
+            <h2>Product Description</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content-1">
+                <h2>Do you Need help?</h2>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p><span>Contact :</span> +918667536845</p>
+                <p><span>email :</span> ecommerce@gmail.com</p>
+            </div>
+            <div class="footer-content-2">
+                <h2>Make a Partnership with Us</h2>
+                <p>Sell on Your Service</p>
+                <p>Became an Affilate</p>
+                <p>Advertise with us</p>
+                <p>Become a Vendor</p>
+            </div>
+            <div class="footer-content-3">
+                <h2>Let Us Help You</h2>
+                <p>Accessibility Statement</p>
+                <p>Your Orders</p>
+                <p>Shipping & Delivery</p>
+                <p>Returns & Replacements</p>
+                <p>Terms and Conditions</p>
+                <p>Privacy & Security</p>
+                <p>Help Center</p>
+            </div>
+            <div class="footer-content-4">
+                <h2>Download our app</h2>
+                <div class="app-download">
+                    <img src="../assets/ios.png" alt="App Store">
+                    <img src="../assets/andriod.png" alt="Play Store">
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <p class="footer-copyright"> All Rights Reserved by Ecommerce - 2025</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+        function closeMenu() {
+            document.getElementById('mobileMenu').style.display = 'none';
+        }
+
+        const ratingElement = document.querySelector('.rating');
+        const rating = parseInt(ratingElement.dataset.rating); // e.g., 3
+
+        for (let i = 1; i <= 5; i++) {
+            const star = document.createElement('i');
+            star.classList.add('fa-star', 'fas');
+            if (i <= rating) {
+                star.classList.add('filled');
+            }
+            ratingElement.appendChild(star);
+        }
+
+        let count = 1;
+        const quantityDisplay = document.getElementById("quantity");
+
+        function increment() {
+            count++;
+            quantityDisplay.textContent = count;
+        }
+
+        function decrement() {
+            if (count > 1) {
+                count--;
+                quantityDisplay.textContent = count;
+            }
+        }
+    </script>
+    <script src="../script/viewproducts.js"></script>
+</body>
+
+</html>

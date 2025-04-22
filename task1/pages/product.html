@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/products.css">
+    <title>View Products</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>FREE delivery & 40% Discount for next 3 orders! Place your 1st order in. </h1>
+            <h1>Summer sale ends in <span>47</span> days <span>9</span> hours <span>53</span> minutes <span>60</span>
+                sec </h1>
+        </div>
+    </header>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="desktop-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./product.html">Products</a></li>
+            <li><a href="./cart.html">Cart</a></li>
+            <li><a href="./aboutus.html">About</a></li>
+            <li><a href="./contactus.html">Contact</a></li>
+
+        </ul>
+        <ul class="user-menu">
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+            <li><a href="./cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
+        </ul>
+        <div class="mobile-nav" id="mobileMenu">
+            <a href="../index.html" onclick="closeMenu()">Home</a>
+            <a href="./product.html" onclick="closeMenu()">Products</a>
+            <a href="./cart.html" onclick="closeMenu()">Cart</a>
+            <a href="./aboutus.html" onclick="closeMenu()">About</a>
+            <a href="./contactus.html" onclick="closeMenu()">Contact</a>
+
+        </div>
+    </nav>
+    <main>
+        <div class="search-filter-box">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products..." id="searchInput">
+                <button type="button" id="searchButton">Search</button>
+            </div>
+            <div class="filter-options">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="laptops">Laptops</option>
+                    <option value="smartphones">Smartphones</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="lighting">Lighting</option>
+                    <option value="mens">Mens Collection</option>
+                    <option value="womens">Womens Collection</option>
+                    <option value="fragrances">Fragrances</option>
+                    <option value="shoes">Shoes</option>
+                </select>
+                <select id="priceFilter">
+                    <option value="">Price Range</option>
+                    <option value="low-to-high">Low to High</option>
+                    <option value="high-to-low">High to Low</option>
+                </select>
+                <button type="button" id="filterButton">Filter</button>
+            </div>
+        </div>
+        <div class="list-products" id="productList">
+            
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content-1">
+                <h2>Do you Need help?</h2>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p><span>Contact :</span> +918667536845</p>
+                <p><span>email :</span> ecommerce@gmail.com</p>
+            </div>
+            <div class="footer-content-2">
+                <h2>Make a Partnership with Us</h2>
+                <p>Sell on Your Service</p>
+                <p>Became an Affilate</p>
+                <p>Advertise with us</p>
+                <p>Become a Vendor</p>
+            </div>
+            <div class="footer-content-3">
+                <h2>Let Us Help You</h2>
+                <p>Accessibility Statement</p>
+                <p>Your Orders</p>
+                <p>Shipping & Delivery</p>
+                <p>Returns & Replacements</p>
+                <p>Terms and Conditions</p>
+                <p>Privacy & Security</p>
+                <p>Help Center</p>
+            </div>
+            <div class="footer-content-4">
+                <h2>Download our app</h2>
+                <div class="app-download">
+                    <img src="../assets/ios.png" alt="App Store">
+                    <img src="../assets/andriod.png" alt="Play Store">
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <p class="footer-copyright"> All Rights Reserved by Ecommerce - 2025</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+        function closeMenu() {
+            document.getElementById('mobileMenu').style.display = 'none';
+        }
+    </script>
+    <script src="../script/products.js"></script>
+</body>
+
+</html>
