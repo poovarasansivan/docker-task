@@ -51,8 +51,8 @@
 - Initially uses a `python:3.12-slim` as a base image.
 - Set the working directory in the container.
 - Copy the app.py and rest of the files inside the contianer.
-- Installing the `python flask`
-- Expose the port that Flask will run on
+- Installing the `python flask` .
+- Expose the port that Flask will run on.
 - Running the flask app.
 
 ```
@@ -71,7 +71,7 @@ CMD ["python", "app.py"]
 
 ## Application Demo
 
-![demo](./assets/flask-app.mp4)
+![demo-video](./assets/flask-app.mp4)
 
 
 ## Task Summary
