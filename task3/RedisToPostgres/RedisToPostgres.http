@@ -1,0 +1,6 @@
+@RedisToPostgres_HostAddress = http://localhost:5186
+
+GET {{RedisToPostgres_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
